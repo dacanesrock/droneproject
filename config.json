@@ -1,0 +1,15 @@
+{
+    "mysql": {
+        "database": "drones_db",
+        "user": "root",
+        "password": "geyekirb1"
+    },
+    "server": {
+        "port": 3000
+    },
+    "app": {
+        "layouts": true,
+        "themes": true,
+        "languages": true
+    }
+}

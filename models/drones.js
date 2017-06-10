@@ -1,11 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
   var Drones = sequelize.define("Drones", {
-    // id: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    //   primaryKey: true,
-    //   autoIncrement: true
-    // },
     drone_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -97,18 +91,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     }
-    // createdAt: {
-    //   type: DataTypes.DATE,
-    //   field: 'created_at',
-    //   allowNull: false,
-    //   defaultValue: 0
-    // },
-    // updatedAt: {
-    //   type: DataTypes.DATE,
-    //   field: 'updated_at',
-    //   allowNull: false,
-    //   defaultValue: 0
-    // }
   });
   return Drones;
 };
