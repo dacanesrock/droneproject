@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     //   primaryKey: true,
     //   autoIncrement: true
     // },
-    drone: {
+    drone_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -39,20 +39,20 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 30]
       }
     },
-    video_max: {
+    video_fps: {
       type: DataTypes.STRING,
       validate: {
         len: [1, 30]
       }
     },
     max_range: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       validate: {
         len: [1, 30]
       }
     },
     flight_time: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       validate: {
         len: [1, 30]
       }
@@ -82,13 +82,13 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false
     },
    max_speed: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       validate: {
         len: [1, 30]
       }
     },
    weight: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       validate: {
         len: [1, 30]
       }
