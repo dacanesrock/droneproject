@@ -4,7 +4,7 @@
         "table": {
             "name": "drones",
             "pk": "id",
-            "verbose": "drones"
+            "verbose": "Drones"
         },
         "columns": [
             {
@@ -17,15 +17,15 @@
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
-                    "show": true
+                    "show": false
                 }
             },
             {
                 "name": "drone_name",
-                "verbose": "drone_name",
+                "verbose": "Drone Name",
                 "control": {
                     "text": true
                 },
@@ -41,15 +41,15 @@
             },
             {
                 "name": "price",
-                "verbose": "price",
+                "verbose": "Price ($)",
                 "control": {
-                    "text": true
+                    "number": true
                 },
                 "type": "int(11)",
                 "allowNull": false,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -57,15 +57,19 @@
             },
             {
                 "name": "camera",
-                "verbose": "camera",
+                "verbose": "Camera Capability",
                 "control": {
-                    "text": true
+                    "radio": true,
+                    "options": [
+                        "True",
+                        "False"
+                    ]
                 },
                 "type": "tinyint(1)",
                 "allowNull": false,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -73,7 +77,7 @@
             },
             {
                 "name": "camera_max",
-                "verbose": "camera_max",
+                "verbose": "Camera Max Resolution",
                 "control": {
                     "text": true
                 },
@@ -81,7 +85,7 @@
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -89,15 +93,19 @@
             },
             {
                 "name": "video",
-                "verbose": "video",
+                "verbose": "Video Capability",
                 "control": {
-                    "text": true
+                    "radio": true,
+                    "options": [
+                        "True",
+                        "False"
+                    ]
                 },
                 "type": "tinyint(1)",
                 "allowNull": true,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -105,7 +113,7 @@
             },
             {
                 "name": "video_res",
-                "verbose": "video_res",
+                "verbose": "Video Resolution",
                 "control": {
                     "text": true
                 },
@@ -113,7 +121,7 @@
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -121,7 +129,7 @@
             },
             {
                 "name": "video_fps",
-                "verbose": "video_fps",
+                "verbose": "Video Max FPS",
                 "control": {
                     "text": true
                 },
@@ -129,7 +137,7 @@
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -137,15 +145,15 @@
             },
             {
                 "name": "max_range",
-                "verbose": "max_range",
+                "verbose": "Max Range (m)",
                 "control": {
-                    "text": true
+                    "number": true
                 },
                 "type": "int(11)",
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -153,15 +161,15 @@
             },
             {
                 "name": "flight_time",
-                "verbose": "flight_time",
+                "verbose": "Flight Time (min)",
                 "control": {
-                    "text": true
+                    "number": true
                 },
                 "type": "int(11)",
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -169,15 +177,19 @@
             },
             {
                 "name": "gimbal",
-                "verbose": "gimbal",
+                "verbose": "Gimbal",
                 "control": {
-                    "text": true
+                    "radio": true,
+                    "options": [
+                        "True",
+                        "False"
+                    ]
                 },
                 "type": "tinyint(1)",
                 "allowNull": true,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -185,15 +197,19 @@
             },
             {
                 "name": "gps",
-                "verbose": "gps",
+                "verbose": "GPS",
                 "control": {
-                    "text": true
+                    "radio": true,
+                    "options": [
+                        "True",
+                        "False"
+                    ]
                 },
                 "type": "tinyint(1)",
                 "allowNull": true,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -201,15 +217,19 @@
             },
             {
                 "name": "avoidance",
-                "verbose": "avoidance",
+                "verbose": "Avoidance",
                 "control": {
-                    "text": true
+                    "radio": true,
+                    "options": [
+                        "True",
+                        "False"
+                    ]
                 },
                 "type": "tinyint(1)",
                 "allowNull": true,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -217,15 +237,19 @@
             },
             {
                 "name": "headless",
-                "verbose": "headless",
+                "verbose": "Headless",
                 "control": {
-                    "text": true
+                    "radio": true,
+                    "options": [
+                        "True",
+                        "False"
+                    ]
                 },
                 "type": "tinyint(1)",
                 "allowNull": true,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -233,15 +257,19 @@
             },
             {
                 "name": "altitude",
-                "verbose": "altitude",
+                "verbose": "Altitude Capable",
                 "control": {
-                    "text": true
+                    "radio": true,
+                    "options": [
+                        "True",
+                        "False"
+                    ]
                 },
                 "type": "tinyint(1)",
                 "allowNull": true,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -249,15 +277,19 @@
             },
             {
                 "name": "flips",
-                "verbose": "flips",
+                "verbose": "Flip Capable",
                 "control": {
-                    "text": true
+                    "radio": true,
+                    "options": [
+                        "True",
+                        "False"
+                    ]
                 },
                 "type": "tinyint(1)",
                 "allowNull": true,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -265,15 +297,15 @@
             },
             {
                 "name": "max_speed",
-                "verbose": "max_speed",
+                "verbose": "Max Speed (kph)",
                 "control": {
-                    "text": true
+                    "number": true
                 },
                 "type": "int(11)",
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -281,15 +313,15 @@
             },
             {
                 "name": "weight",
-                "verbose": "weight",
+                "verbose": "Weight (g)",
                 "control": {
-                    "text": true
+                    "number": true
                 },
                 "type": "int(11)",
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -297,47 +329,51 @@
             },
             {
                 "name": "intelligent_flight",
-                "verbose": "intelligent_flight",
+                "verbose": "Intelligent Flight",
                 "control": {
-                    "text": true
+                    "radio": true,
+                    "options": [
+                        "True",
+                        "False"
+                    ]
                 },
                 "type": "tinyint(1)",
                 "allowNull": true,
                 "defaultValue": "0",
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
                 }
             },
             {
-                "name": "createdAt",
-                "verbose": "createdAt",
+                "name": "picture_small",
+                "verbose": "Small Picture LInk (160x160px)",
                 "control": {
-                    "text": true
+                    "textarea": true
                 },
-                "type": "datetime",
+                "type": "varchar(255)",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
                 }
             },
             {
-                "name": "updatedAt",
-                "verbose": "updatedAt",
+                "name": "picture_large",
+                "verbose": "Large Picture Link (600X600px)",
                 "control": {
-                    "text": true
+                    "textarea": true
                 },
-                "type": "datetime",
+                "type": "varchar(255)",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true

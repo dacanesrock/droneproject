@@ -1,5 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
-  var Drones = sequelize.define("Drones", {
+  var drones = sequelize.define("drones", {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     drone_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -25,6 +30,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     video: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
       defaultValue: false
     },
     video_res: {
@@ -40,23 +46,25 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     max_range: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       validate: {
         len: [1, 30]
       }
     },
     flight_time: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       validate: {
         len: [1, 30]
       }
     },
     gimbal: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
       defaultValue: false
     },
      gps: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
       defaultValue: false
     },
     avoidance: {
@@ -76,13 +84,13 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false
     },
    max_speed: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       validate: {
         len: [1, 30]
       }
     },
    weight: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       validate: {
         len: [1, 30]
       }
@@ -90,7 +98,15 @@ module.exports = function(sequelize, DataTypes) {
     intelligent_flight: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
+    },
+    picture_small: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    picture_large: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   });
-  return Drones;
+  return drones;
 };

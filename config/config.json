@@ -1,10 +1,13 @@
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "geyekirb1",
     "database": "drones_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {
+      "timestamps": false
+    }
   },
   "test": {
     "username": "root",
