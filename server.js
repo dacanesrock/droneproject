@@ -9,8 +9,6 @@ var PORT = 3000;
 
 var app = express();
 
-// Serve static content for the app from the "public" directory in the application directory.
-
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
 
@@ -30,11 +28,19 @@ xAdmin.init(config, function (err, admin) {
     // mount express-admin before any other middlewares
     app.use('/admin', admin);
     // site specific middlewares
+    // Serve static content for the app from the "public" directory in the application directory.
     app.use(express.static(process.cwd() + "/public"));
     app.use(bodyParser.urlencoded({ extended: false }));
 
-    // app.use(express.bodyParser());
+    // uncomment when handlebars are made ----
+    // app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+    // app.set("view engine", "handlebars");
+
+    // Import routes and give the server access to them.
+    // var routes = require("./controllers/drone_controller.js");
+
     // site routes
+    // app.use("/", routes);
     app.get('/', function (req, res) {
         res.send('Hello World');
     });
@@ -46,19 +52,4 @@ xAdmin.init(config, function (err, admin) {
     });
 });
 
-// uncomment when handlebars are made ----
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
 //
-// Import routes and give the server access to them.
-// var routes = require("./controllers/burger_controller.js");
-
-// app.use("/", routes);
-
-// possibly use this code INSIDE xadmin.config ----
-// Syncing our sequelize models and then starting our express app
-// db.sequelize.sync({}).then(function() {
-//   app.listen(PORT, function() {
-//     console.log("App listening on PORT " + PORT);
-//   });
-// });
