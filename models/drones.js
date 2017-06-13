@@ -62,7 +62,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: false
     },
-     gps: {
+    gps: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false
@@ -83,13 +83,13 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-   max_speed: {
+    max_speed: {
       type: DataTypes.STRING,
       validate: {
         len: [1, 30]
       }
     },
-   weight: {
+    weight: {
       type: DataTypes.STRING,
       validate: {
         len: [1, 30]
