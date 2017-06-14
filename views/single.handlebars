@@ -1,0 +1,104 @@
+
+<div class="container">
+  	<div class="row">
+		<div class="stateDrone">
+			<h3>Here is the Drone you selected</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="picPlace">
+			<img src="{{single.picture_large}}" alt="Drone pic" style="width:300px;height:300px;">
+		</div>
+    <div class="modelPicked">
+			<h3>Model number: {{single.drone_name}}</h3>
+		</div>
+    <div class="modelPrice">
+      <h3>Drone Price: ${{single.price}}</h3>
+    </div>
+ 
+    <div class="modelCamera">
+      {{#if single.camera}}
+        <h3>Camera: Yes</h3>
+      {{else}}
+        <h3>Not equiped with camera</h3>
+      {{/if}}
+    </div>
+    <div class="modelCameraMax">
+      <h3>Max camera resolution: {{single.camera_max}}</h3>
+    </div>
+    <div class="modelVideo">
+      {{#if single.video}}
+        <h3>Video: Yes</h3>
+      {{else}}
+        <h3>Not equiped with video</h3>
+      {{/if}}
+    </div>
+    <div class="modelVideoRes">
+      <h3>Max video resolution: {{single.video_res}}</h3>
+    </div> 
+    <div class="modelVideoFPS">
+      <h3>Max video fps: {{single.video_fps}}</h3>
+    </div>
+    <div class="modelRange">
+      <h3>Max range: {{single.max_range}}</h3>
+    </div> 
+    <div class="modelFlightTime">
+    <h3>Max flight time: {{single.flight_time}}</h3>
+    </div>
+    <div class="modelGimble">
+      {{#if single.gimble}}
+        <h3>Gimble: Yes</h3>
+      {{else}}
+        <h3>Not equiped with a gimble</h3>
+      {{/if}}
+    </div>
+    <div class="modelGPS">
+      {{#if single.gps}}
+        <h3>GPS: Yes</h3>
+      {{else}}
+        <h3>Not equiped with GPS</h3>
+      {{/if}}
+    </div>
+    <div class="modelAvoidance">
+      {{#if single.avoidance}}
+        <h3>Avoidance: Yes</h3>
+      {{else}}
+        <h3>Not equiped with Avoidance</h3>
+      {{/if}}
+    </div>
+    <div class="modelHeadless">
+      {{#if single.headless}}
+        <h3>Headless: Yes</h3>
+      {{else}}
+        <h3>Not headless</h3>
+      {{/if}}
+    </div>
+    <div class="modelAltitude">
+      {{#if single.altitude}}
+        <h3>Altitude: Yes</h3>
+      {{else}}
+        <h3>Altitude: No</h3>
+      {{/if}}
+    </div>
+    <div class="modelFlips">
+      {{#if single.flips}}
+        <h3>Flips: Yes</h3>
+      {{else}}
+        <h3>Flips: No</h3>
+      {{/if}}
+    </div>
+    <div class="modelMaxSpeed">
+      <h3>Max speed: {{single.max_speed}}</h3>
+    </div>
+    <div class="modelWeight">
+      <h3>Drone Weight: {{single.weight}} grams</h3>
+    </div>
+    <div class="modelIntelFlight">
+      {{#if single.intelligent_flight}}
+        <h3>Intelligent flight: Yes</h3>
+      {{else}}
+       <h3>Intelligent flight: No</h3>
+      {{/if}}
+    </div>
+  </div>      
+</div>

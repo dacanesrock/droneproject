@@ -1,0 +1,66 @@
+
+<div class="container">
+  	<div class="row">
+		<div class="mainQuestion">
+			<h3>Pick your Drone</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="choosePrice">
+			<h4>Choose the price.</h4>
+		</div>
+		<div class="priceList">
+			<form class="form-inline" action="/" method="POST">
+				<div class="form-group">
+ 				 <label class="mr-sm-2" for="inlineFormCustomSelect">Configure</label>
+ 					 <select name="price" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+ 					   <option selected>Choose...</option>
+ 					   <option value="1">Under $100</option>
+ 					   <option value="2">$100 - $500</option>
+ 					   <option value="3">Above $500</option>
+ 					 </select>
+ 					 <select name="camera" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+ 					   <option selected>Choose...</option>
+ 					   <option value="1">With Camera</option>
+ 					   <option value="0">Without Camera</option>
+ 					 </select>
+ 					 <select name="flight" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+ 					   <option selected>Choose...</option>
+ 					   <option value="1">Intelligent Flight Capable</option>
+ 					   <option value="0">Inteligent Flight Non-Capable</option>
+ 					 </select>
+ 				 <button type="submit" class="btn btn-primary">Submit</button>
+ 				 </div>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="picMessage">
+			<h4>Here are the pictures that meet your criteria.</h4>
+		</div>
+		<div class="picPlace">
+			<ul><p>
+				{{#each drones}}
+					<li>
+						<h4>{{this.drone_name}}</h4>
+						<h4>${{this.price}}</h4>
+						<form id="clickForm" action="/single/{{this.id}}" method="POST">
+							<img id="clickPic" src="{{this.picture_small}}" alt="Drone pic" style="width:200px;height:200px;">
+							<input type="submit" value="Submit">
+						</form>
+					</li>
+				{{/each}}
+			</p></ul>
+		</div>
+	</div>	
+</div>
+
+<!--<script>
+
+	$("#clickPic").on("click", function() {
+		$("#clickForm").submit();
+	});
+
+</script>
+
+

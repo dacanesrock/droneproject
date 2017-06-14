@@ -1,0 +1,23 @@
+
+<div class="container">
+	<div class="row">
+		<div class="picMessage">
+			<h4>Here are the drones that meet your criteria.</h4>
+		</div>
+		<div class="picPlace">
+			<ul><p>
+				{{#each drones}}
+					<li>
+						<h4>{{this.drone_name}}</h4>
+						<h4>${{this.price}}</h4>
+						<form id="clickForm" action="/single/{{this.id}}" method="POST">
+							<img id="clickPic" src="{{this.picture_small}}" alt="Drone pic" style="width:200px;height:200px;">
+							<input type="submit" value="Submit">
+						</form>
+					</li>
+				{{/each}}
+			</p></ul>
+		</div>
+	</div>	
+</div>
+

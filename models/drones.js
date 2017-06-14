@@ -1,12 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
   var Drones = sequelize.define("Drones", {
-    // id: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    //   primaryKey: true,
-    //   autoIncrement: true
-    // },
-    drone: {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    drone_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -31,6 +30,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     video: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
       defaultValue: false
     },
     video_res: {
@@ -39,7 +39,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 30]
       }
     },
-    video_max: {
+    video_fps: {
       type: DataTypes.STRING,
       validate: {
         len: [1, 30]
@@ -59,10 +59,12 @@ module.exports = function(sequelize, DataTypes) {
     },
     gimbal: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
       defaultValue: false
     },
      gps: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
       defaultValue: false
     },
     avoidance: {
@@ -96,19 +98,15 @@ module.exports = function(sequelize, DataTypes) {
     intelligent_flight: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
+    },
+    picture_small: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    picture_large: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
-    // createdAt: {
-    //   type: DataTypes.DATE,
-    //   field: 'created_at',
-    //   allowNull: false,
-    //   defaultValue: 0
-    // },
-    // updatedAt: {
-    //   type: DataTypes.DATE,
-    //   field: 'updated_at',
-    //   allowNull: false,
-    //   defaultValue: 0
-    // }
   });
   return Drones;
 };
