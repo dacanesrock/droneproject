@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Exo|Righteous" rel="stylesheet">
+  <script src="https://use.fontawesome.com/19fb225610.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+  <ul id="menu">
+    <li data-menuanchor="first"><a href="#first">First slide</a></li>
+    <li data-menuanchor="second"><a href="#second">Second slide</a></li>
+    <li data-menuanchor="third"><a href="#third">Third slide</a></li>
+    <h1 style="text-align: center">RESULTS</h1>
+
+  </ul>
+  <div class="container">
+    {{#each drones}}
+    <div class="main col-md-4 snake">
+      <div class="overlay"><span class="header">{{this.drone_name}}</span>
+        <span class="description">${{this.price}}</span></div>
+      <img class="snkimg" src="{{this.picture_small}}" />
+    </div>
+    {{/each}}
+  </div>
+  </div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="../snakegallery/snake.min.js"></script>
+<script src="app.js"></script>
+
+<script>
+  $(".snake").snakeify({
+    speed: 200
+  });
+</script>
+
+</html>

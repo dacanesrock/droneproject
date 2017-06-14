@@ -35,17 +35,17 @@ xAdmin.init(config, function(err, admin) {
   }));
 
   // uncomment when handlebars are made ----
-  // app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-  // app.set("view engine", "handlebars");
+  app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+  app.set("view engine", "handlebars");
 
   // Import routes and give the server access to them.
   var routes = require("./controllers/drone_controller.js");
   // site routes
   app.use("/", routes);
   app.use("/single/:id", routes);
-  app.get('/', function(req, res) {
-    res.send('Hello World');
-  });
+  // app.get('/', function(req, res) {
+  //   res.send('Hello World');
+  // });
 
   // site server
   db.sequelize.sync({}).then(function() {

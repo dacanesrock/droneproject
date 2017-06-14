@@ -5,7 +5,7 @@ var drones = require("../models/drones.js");
 var db = require("../models");
 
 router.get("/", function(req, res) {
-  res.render("index");
+  res.render("title");
 });
 
 router.post("/", function(req, res) {
@@ -40,7 +40,7 @@ router.post("/", function(req, res) {
       drones: dbDrones
     };
     console.log(dbDrones);
-    res.render("index", convert);
+    res.render("quiz", convert);
   });
 });
 
