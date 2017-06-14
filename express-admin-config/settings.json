@@ -4,7 +4,7 @@
         "table": {
             "name": "drones",
             "pk": "id",
-            "verbose": "Drones"
+            "verbose": "Drones Inventory"
         },
         "columns": [
             {
@@ -368,6 +368,91 @@
                 "verbose": "Large Picture Link (600X600px)",
                 "control": {
                     "textarea": true
+                },
+                "type": "varchar(255)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": false
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "contents": {
+        "slug": "contents",
+        "table": {
+            "name": "contents",
+            "pk": "id",
+            "verbose": "Content Pages"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": false
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "page_name",
+                "verbose": "Page Title",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(255)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "header",
+                "verbose": "Page Header",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(255)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": false
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "text",
+                "verbose": "Body Text",
+                "control": {
+                    "textarea": true,
+                    "editor": "ckeditor"
                 },
                 "type": "varchar(255)",
                 "allowNull": false,

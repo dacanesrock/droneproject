@@ -1,1 +1,12 @@
-{}
+{
+  "ckeditor": {
+    "public": {
+        "local": {
+            "path": "./ckeditor",
+            "js": [
+                "/ckeditor.js"
+            ]
+        }
+    }
+}
+}
