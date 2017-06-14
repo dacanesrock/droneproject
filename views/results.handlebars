@@ -1,21 +1,14 @@
-
-  <ul id="menu">
-    <li data-menuanchor="first"><a href="#first">First slide</a></li>
-    <li data-menuanchor="second"><a href="#second">Second slide</a></li>
-    <li data-menuanchor="third"><a href="#third">Third slide</a></li>
-    <h1 style="text-align: center">RESULTS</h1>
-
-  </ul>
-  <div class="container">
-    {{#each drones}}
+<h1 style="text-align: center">RESULTS</h1>
+<div class="container">
+  {{#each drones}}
     <div class="main col-md-4 snake">
       <div class="overlay"><span class="header">{{this.drone_name}}</span>
         <span class="description">${{this.price}}</span></div>
       <img class="snkimg" src="{{this.picture_small}}" />
     </div>
-    {{/each}}
-  </div>
-  </div>
+  {{/each}}
+</div>
+</div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="../snakegallery/snake.min.js"></script>

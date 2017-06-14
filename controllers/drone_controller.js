@@ -5,7 +5,7 @@ var drones = require("../models/drones.js");
 var db = require("../models");
 
 router.get("/", function(req, res) {
-  res.render("quiz");
+  res.render("title");
 });
 
 router.get("/quiz", function(req, res) {
@@ -14,7 +14,6 @@ router.get("/quiz", function(req, res) {
 
 router.post("/results", function(req, res) {
   //  console.log(req.body.price, req.body.camera, req.body.flight)
-
   if (req.body.price == 1) {
     var priceRange = [0, 100];
   } else if (req.body.price == 2) {
@@ -44,7 +43,7 @@ router.post("/results", function(req, res) {
       drones: dbDrones
     };
     console.log(dbDrones);
-    res.render("quiz", convert);
+    res.render("results", convert);
   });
 });
 
