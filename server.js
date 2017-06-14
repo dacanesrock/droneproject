@@ -9,9 +9,6 @@ var PORT = process.env.PORT || 3000;
 
 var app = express();
 
-// Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));
-
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
@@ -42,10 +39,6 @@ xAdmin.init(config, function(err, admin) {
   var routes = require("./controllers/drone_controller.js");
   // site routes
   app.use("/", routes);
-  app.use("/single/:id", routes);
-  // app.get('/', function(req, res) {
-  //   res.send('Hello World');
-  // });
 
   // site server
   db.sequelize.sync({}).then(function() {

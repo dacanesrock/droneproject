@@ -5,10 +5,14 @@ var drones = require("../models/drones.js");
 var db = require("../models");
 
 router.get("/", function(req, res) {
-  res.render("title");
+  res.render("quiz");
 });
 
-router.post("/", function(req, res) {
+router.get("/quiz", function(req, res) {
+  res.render("quiz");
+});
+
+router.post("/results", function(req, res) {
   //  console.log(req.body.price, req.body.camera, req.body.flight)
 
   if (req.body.price == 1) {
