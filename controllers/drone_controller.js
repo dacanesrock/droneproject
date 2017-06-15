@@ -12,6 +12,21 @@ router.get("/quiz", function(req, res) {
   res.render("quiz");
 });
 
+router.get("/about", function(req, res) {
+  db.Content.findOne({
+    where: {
+      id: "1"
+    }
+  }).then(function(data) {
+    var hbsObject = {
+      content: data
+    };
+    res.render("about", hbsObject);
+    console.log(hbsObject.content.header);
+    console.log(hbsObject.content.text);
+  });
+});
+
 router.post("/results", function(req, res) {
   //  console.log(req.body.price, req.body.camera, req.body.flight)
   if (req.body.price == 1) {
