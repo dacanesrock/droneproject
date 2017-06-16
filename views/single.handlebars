@@ -1,11 +1,12 @@
 <div class="headerbox"></div>
-<div class="image-container" style="background-image:url(" {{single.picture_large}} "),background-size:auto 600px, background-attachment: fixed">
+<div class="image-container" style="background-image:url(" {{ single.picture_large }} ");background-size:auto 600px; background-attachment: fixed;">
+  <img src="https://i0.wp.com/www.drone.ie/wp-content/uploads/2017/01/SYMA-X5UW1200_.jpg?resize=600%2C600">
   <div class="drone-name">
-    DRONE NAME
+    {{single.drone_name}}
   </div>
 </div><br><br>
 <section class="content">
-  <h3>Model Number:</h3>{{single.price}}</section>
+  <h3>Model Price:</h3>${{single.price}}</section>
 <section class="content">
   {{#if single.camera}}
     <h3>Camera:</h3> Yes
@@ -34,59 +35,59 @@
 </section>
 <section class="content">
   <h3>Max flight time: </h3>{{single.flight_time}}
-  </div>
-  <section class="content">
-    {{#if single.gimble}}
-      <h3>Gimble:</h3> Yes
-    {{else}}
-      <h3>Gimble:</h3>No
-    {{/if}}
-  </section>
-  <section class="content">
-    {{#if single.gps}}
-      <h3>GPS:</h3> Yes
-    {{else}}
-      <h3>GPS:</h3> Yes
-    {{/if}}
-  </section>
-  <section class="content">
-    {{#if single.avoidance}}
-      <h3>Avoidance:</h3> Yes
-    {{else}}
-      No
-    {{/if}}
-  </section>
-  <section class="content">
-    {{#if single.headless}}
-      <h3>Headless:</h3> Yes
-    {{else}}
-      No
-    {{/if}}
-  </section>
-  <section class="content">
-    {{#if single.altitude}}
-      <h3>Altitude:</h3> Yes
-    {{else}}
-      <h3>Altitude:</h3> No
-    {{/if}}
-  </section>
-  <section class="content">
-    {{#if single.flips}}
-      <h3>Flips:</h3> Yes
-    {{else}}
-      <h3>Flips:</h3> No
-    {{/if}}
-  </section>
-  <section class="content">
-    <h3>Max speed: </h3>{{single.max_speed}}
-  </section>
-  <section class="content">
-    <h3>Drone Weight:</h3> {{single.weight}} grams
-  </section>
-  <section class="content">
-    {{#if single.intelligent_flight}}
-      <h3>Intelligent flight:</h3> Yes
-    {{else}}
-      <h3>Intelligent flight:</h3> No
-    {{/if}}
-  </section>
+</section>
+<section class="content">
+  {{#if single.gimble}}
+    <h3>Gimble:</h3> Yes
+  {{else}}
+    <h3>Gimble:</h3>No
+  {{/if}}
+</section>
+<section class="content">
+  {{#if single.gps}}
+    <h3>GPS:</h3> Yes
+  {{else}}
+    <h3>GPS:</h3> Yes
+  {{/if}}
+</section>
+<section class="content">
+  {{#if single.avoidance}}
+    <h3>Avoidance:</h3> Yes
+  {{else}}
+    <h3>Avoidance:</h3> No
+  {{/if}}
+</section>
+<section class="content">
+  {{#if single.headless}}
+    <h3>Headless:</h3> Yes
+  {{else}}
+    No
+  {{/if}}
+</section>
+<section class="content">
+  {{#if single.altitude}}
+    <h3>Altitude:</h3> Yes
+  {{else}}
+    <h3>Altitude:</h3> No
+  {{/if}}
+</section>
+<section class="content">
+  {{#if single.flips}}
+    <h3>Flips:</h3> Yes
+  {{else}}
+    <h3>Flips:</h3> No
+  {{/if}}
+</section>
+<section class="content">
+  <h3>Max speed: </h3>{{single.max_speed}} kph
+</section>
+<section class="content">
+  <h3>Drone Weight:</h3> {{single.weight}} grams
+</section>
+<section class="content">
+  {{#if single.intelligent_flight}}
+    <h3>Intelligent flight:</h3> Yes
+  {{else}}
+    <h3>Intelligent flight:</h3> No
+  {{/if}}
+</section>
