@@ -272,9 +272,11 @@ p {
 
 .overlay {
   position: absolute;
+  top: 75%;
   opacity: 0.9;
+  width: 100%;
   text-align: center;
-  padding-top: 60px;
+  padding-bottom: 75%;
   background-color: #222;
   color: #fff;
 }
