@@ -4,7 +4,7 @@ The title is a play on "Quad Amateurs", referencing the 4 propellors found on mo
 ## Purpose/Uses
 
 ### Help users find the perfect drone
->[Imgur](http://i.imgur.com/SitUYCr.png)
+>![Imgur](http://i.imgur.com/SitUYCr.png)
 ### Inform users of drone regulations
 >[Imgur](http://i.imgur.com/CYzM4Vy.png)
 ### Display useful resources to user
