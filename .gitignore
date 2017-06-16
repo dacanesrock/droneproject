@@ -1,7 +1,3 @@
 .DS_Store
 node_modules
-log.txt
-.sql
-.env
-npm_debug.log
 seeders
