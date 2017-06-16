@@ -62,10 +62,10 @@ router.post("/results", function(req, res) {
   });
 });
 
-router.get("/single/:id", function(req, res) {
+router.get("/drone/:drone_name", function(req, res) {
   db.drones.findOne({
     where: {
-      id: req.params.id
+      drone_name: req.params.drone_name
     },
     // attributes: ["drone_name", "price", "camera", "weight", "picture_large"]
   }).then(function(theDrone) {

@@ -2,7 +2,7 @@
   <div class = "result-header">Results</div>
     <div class = "container">
       {{#each drones}}
-        <a href="/single/{{this.id}}" name="{{this.id}}" method="POST">
+        <a href="/drone/{{this.drone_name}}" name="{{this.drone_name}}" method="POST">
           <div class="main col-md-4 snake">
               <div class="overlay"><span class="header">{{this.drone_name}}</span>
               <span class="description">${{this.price}}</span></div>
