@@ -14,6 +14,8 @@ The title is a play on "Quad Amateurs", referencing the 4 propellors found on mo
 ***
 * 1 - Fix Heroku Deployment
 * 2 - Adjust additional links
+* 3 - Add a compare feature
+* 4 - Add more resources/additional links
 ***
 
 ## Built With
