@@ -454,7 +454,7 @@
                     "textarea": true,
                     "editor": "ckeditor"
                 },
-                "type": "varchar(255)",
+                "type": "LONGTEXT",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {

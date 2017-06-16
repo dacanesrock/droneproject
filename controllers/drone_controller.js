@@ -5,11 +5,11 @@ var drones = require("../models/drones.js");
 var db = require("../models");
 
 router.get("/", function(req, res) {
-  res.render("title");
+  res.render("title", {layout: 'titleLayout'});
 });
 
 router.get("/quiz", function(req, res) {
-  res.render("quiz");
+  res.render("quiz", {layout: 'quizLayout'});
 });
 
 router.get("/about", function(req, res) {
@@ -40,7 +40,7 @@ router.post("/results", function(req, res) {
   var seeing = req.body.camera;
   var iFlight = req.body.flight;
 
-  db.Drones.findAll({
+  db.drones.findAll({
     where: {
       //           id: [1, 16]
       price: {
@@ -57,15 +57,15 @@ router.post("/results", function(req, res) {
     var convert = {
       drones: dbDrones
     };
-    console.log(dbDrones);
+  //  console.log(dbDrones);
     res.render("results", convert);
   });
 });
 
 router.post("/single/:id", function(req, res) {
-  db.Drones.findOne({
+  db.drones.findOne({
     where: {
-      id: (req.params.id)
+      id: req.params.id
     },
     attributes: ["drone_name", "price", "camera", "weight", "picture_large"]
   }).then(function(theDrone) {
@@ -78,7 +78,7 @@ router.post("/single/:id", function(req, res) {
       single: theDrone.dataValues
     };
     console.log(convert);
-    res.render("single", convert);
+    res.render("single");
   });
 });
 

@@ -1,21 +1,14 @@
-<h1 style="text-align: center">RESULTS</h1>
-<div class="container">
-  {{#each drones}}
-    <div class="main col-md-4 snake">
-      <div class="overlay"><span class="header">{{this.drone_name}}</span>
-        <span class="description">${{this.price}}</span></div>
-      <img class="snkimg" src="{{this.picture_small}}" />
+<div class="full-size titlebackground">
+  <div class = "result-header">Results</div>
+    <div class = "container">
+      {{#each drones}}
+        <a href="/single/{{this.id}}" action="/single/{{this.id}}" method="POST">
+          <div class="main col-md-4 snake">
+              <div class="overlay"><span class="header">{{this.drone_name}}</span>
+              <span class="description">${{this.price}}</span></div>
+              <img class="snkimg" src="{{this.picture_small}}"/>
+          </div>
+        </a>
+      {{/each}}
     </div>
-  {{/each}}
 </div>
-</div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="../snakegallery/snake.min.js"></script>
-<script src="app.js"></script>
-
-<script>
-  $(".snake").snakeify({
-    speed: 200
-  });
-</script>

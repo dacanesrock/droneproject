@@ -1,51 +1,67 @@
-  <div id="myContainer">
+<div id = "myContainer">
+<div id="header">
+  <div class="fixed-action-btn horizontal click-to-toggle">
+      <a class = "cog"><i class="fa fa-cog fa-spin fa-4x fa-fw"></i>
+  </a>
+  <ul>
+    <li><a class = "mainlink linktext" href = "/">Home</a></li>
+    <li><a class = "mainlink linktext" href = "/admin">Admin</a></li>
+    <li><a class = "mainlink linktext" href = "/faq">FAQ</a></li>
+    <li><a class = "mainlink linktext" href = "/about">About</a></li>
+  </ul>
+</div>
+<p class = "instr">SCROLL UP AND DOWN TO NAVIGATE</p>
+</div>
+
+<div id="myContainer">
+  <form action="/results" method="POST">
     <div id="multiscroll">
       <div class="ms-left">
-        <div class="ms-section left1 active">What's your Max Price Range(s)?</div>
-        <div class="ms-section left2">Does it have a Camera</div>
-        <div class="ms-section left3">Does it have Intelligent Flight?</div>
-        <div class="ms-section left3">All set?</div>
+        <div class="ms-section left1 active">WHAT'S YOUR PRICE RANGE</div>
+        <div class="ms-section left2">DOES IT HAVE A CAMERA</div>
+        <div class="ms-section left3">DOES IT HAVE INTELLIGENT FLIGHT?</div>
+        <div class="ms-section left3">ALL SET?</div>
       </div>
       <div class="ms-right">
         <div class="ms-section right1 active">
           <div class="answerholder">
             <div class="input-field col s12">
               <select name="price">
-      							<option value="" disabled selected>Choose</option>
-      							<option value="1">$0-$100</option>
-      							<option value="2">$100-$500</option>
-      							<option value="3">$500+</option>
-    						</select>
+                    <option value="" disabled selected>CHOOSE</option>
+                    <option value="1">$0-$100</option>
+                    <option value="2">$100-$500</option>
+                    <option value="3">$500+</option>
+                </select>
             </div>
           </div>
         </div>
         <div class="ms-section right2">
           <div class="answerholder">
             <div class="input-field col s12">
-              <select name="price">
-      							<option value="" disabled selected>Choose</option>
-      							<option value="1">Yes</option>
-      							<option value="0">No</option>
-    						</select>
+              <select name="camera">
+                    <option value="" disabled selected>CHOOSE</option>
+                    <option value="1">YES</option>
+                    <option value="0">NO</option>
+                </select>
             </div>
           </div>
         </div>
         <div class="ms-section right3">
           <div class="answerholder">
             <div class="input-field col s12">
-              <select name="price">
-      							<option value="" disabled selected>Choose</option>
-      							<option value="1">Yes</option>
-      							<option value="0">No</option>
-    						</select>
+              <select name="flight">
+                    <option value="" disabled selected>CHOOSE</option>
+                    <option value="1">YES</option>
+                    <option value="0">NO</option>
+                </select>
             </div>
           </div>
         </div>
         <div class="ms-section right4">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    			<i class="material-icons right">send</i>
-  	  		</button>
+          <button type="submit">Submit</button>
+          <!-- <a id ="submit" href="/results"> SUBMIT </a> -->
         </div>
       </div>
     </div>
-  </div>
+  </form
+</div>

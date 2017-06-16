@@ -47,5 +47,3 @@ xAdmin.init(config, function(err, admin) {
     });
   });
 });
-
-//

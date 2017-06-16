@@ -1,0 +1,41 @@
+<div class="full-size">
+      <div class = "image-container">
+        <div class = "drone-name">
+          {{this.drone_name}}
+        </div>
+
+      </div>
+      <section class = "content">
+        <p>
+          What is Lorem Ipsum?
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </section>
+      <section class = "content-right">
+        <p>
+          What is Lorem Ipsum?
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </section>
+</div>
+
+<script>
+
+$(window).scroll(function(){
+
+	var winScroll = $(this).scrollTop();
+
+		$('.drone-name').css({
+			'transform':'translate (0px, '+ winScroll /2 + '%)';
+		});
+
+	if(wscroll > $('.slidingdivs').offset().top = ($(window).height()/ 1.2)){
+		setTimeout(function(){
+			$('.slidingdivs box').eq(i).addClass('appear');
+		}, 150 * (i+1));
+	};
+
+});
+
+
+</script>
