@@ -12,16 +12,16 @@ router.get("/quiz", function(req, res) {
   res.render("quiz", {layout: 'quizLayout'});
 });
 
-router.get("/about", function(req, res) {
+router.get("/:page_name", function(req, res) {
   db.Content.findOne({
     where: {
-      id: "1"
+      page_name: req.params.page_name
     }
   }).then(function(data) {
     var hbsObject = {
       content: data
     };
-    res.render("about", hbsObject);
+    res.render("content", hbsObject);
     console.log(hbsObject.content.header);
     console.log(hbsObject.content.text);
   });

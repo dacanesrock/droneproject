@@ -7,6 +7,13 @@ body {
   font-family: 'Audiowide', cursive;
   color: white;
   background-color: black;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 h1 {
@@ -332,7 +339,7 @@ p {
 
 h3 {
   color: orange;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .headerbox {
@@ -369,4 +376,8 @@ h3 {
   position: absolute;
   top: -5%;
   margin-left: 4px;
+}
+
+.center {
+    margin-left:10px;
 }
