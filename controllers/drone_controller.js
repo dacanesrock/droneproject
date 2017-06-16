@@ -62,23 +62,20 @@ router.post("/results", function(req, res) {
   });
 });
 
-router.post("/single/:id", function(req, res) {
+router.get("/single/:id", function(req, res) {
   db.drones.findOne({
     where: {
       id: req.params.id
     },
-    attributes: ["drone_name", "price", "camera", "weight", "picture_large"]
+    // attributes: ["drone_name", "price", "camera", "weight", "picture_large"]
   }).then(function(theDrone) {
-
-    //  db.Drones.findById(req.parmas.id)
-    //    console.log(req.params.id);
-    //    .then(function(theDrone) {
+    console.log(req.params);
 
     var convert = {
       single: theDrone.dataValues
     };
     console.log(convert);
-    res.render("single");
+    res.render("single", convert);
   });
 });
 

@@ -1,41 +1,92 @@
-<div class="full-size">
-      <div class = "image-container">
-        <div class = "drone-name">
-          {{this.drone_name}}
-        </div>
-
-      </div>
-      <section class = "content">
-        <p>
-          What is Lorem Ipsum?
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-      </section>
-      <section class = "content-right">
-        <p>
-          What is Lorem Ipsum?
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-      </section>
-</div>
-
-<script>
-
-$(window).scroll(function(){
-
-	var winScroll = $(this).scrollTop();
-
-		$('.drone-name').css({
-			'transform':'translate (0px, '+ winScroll /2 + '%)';
-		});
-
-	if(wscroll > $('.slidingdivs').offset().top = ($(window).height()/ 1.2)){
-		setTimeout(function(){
-			$('.slidingdivs box').eq(i).addClass('appear');
-		}, 150 * (i+1));
-	};
-
-});
-
-
-</script>
+<div class="headerbox"></div>
+<div class="image-container" style="background-image:url(" {{single.picture_large}} "),background-size:auto 600px, background-attachment: fixed">
+  <div class="drone-name">
+    DRONE NAME
+  </div>
+</div><br><br>
+<section class="content">
+  <h3>Model Number:</h3>{{single.price}}</section>
+<section class="content">
+  {{#if single.camera}}
+    <h3>Camera:</h3> Yes
+  {{else}}
+    <h3>Camera:</h3>No
+  {{/if}}
+</section>
+<section class="content">
+  <h3>Max camera resolution:</h3> {{single.camera_max}}
+</section>
+<section class="content">
+  {{#if single.video}}
+    <h3>Video:</h3> Yes
+  {{else}}
+    <h3>Video:</h3> No
+  {{/if}}
+</section>
+<section class="content">
+  <h3>Max video resolution: </h3>{{single.video_res}}
+</section>
+<section class="content">
+  <h3>Max video fps:</h3> {{single.video_fps}}
+</section>
+<section class="content">
+  <h3>Max range: </h3>{{single.max_range}}
+</section>
+<section class="content">
+  <h3>Max flight time: </h3>{{single.flight_time}}
+  </div>
+  <section class="content">
+    {{#if single.gimble}}
+      <h3>Gimble:</h3> Yes
+    {{else}}
+      <h3>Gimble:</h3>No
+    {{/if}}
+  </section>
+  <section class="content">
+    {{#if single.gps}}
+      <h3>GPS:</h3> Yes
+    {{else}}
+      <h3>GPS:</h3> Yes
+    {{/if}}
+  </section>
+  <section class="content">
+    {{#if single.avoidance}}
+      <h3>Avoidance:</h3> Yes
+    {{else}}
+      No
+    {{/if}}
+  </section>
+  <section class="content">
+    {{#if single.headless}}
+      <h3>Headless:</h3> Yes
+    {{else}}
+      No
+    {{/if}}
+  </section>
+  <section class="content">
+    {{#if single.altitude}}
+      <h3>Altitude:</h3> Yes
+    {{else}}
+      <h3>Altitude:</h3> No
+    {{/if}}
+  </section>
+  <section class="content">
+    {{#if single.flips}}
+      <h3>Flips:</h3> Yes
+    {{else}}
+      <h3>Flips:</h3> No
+    {{/if}}
+  </section>
+  <section class="content">
+    <h3>Max speed: </h3>{{single.max_speed}}
+  </section>
+  <section class="content">
+    <h3>Drone Weight:</h3> {{single.weight}} grams
+  </section>
+  <section class="content">
+    {{#if single.intelligent_flight}}
+      <h3>Intelligent flight:</h3> Yes
+    {{else}}
+      <h3>Intelligent flight:</h3> No
+    {{/if}}
+  </section>
