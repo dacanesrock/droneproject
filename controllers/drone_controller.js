@@ -66,8 +66,7 @@ router.get("/drone/:drone_name", function(req, res) {
   db.drones.findOne({
     where: {
       drone_name: req.params.drone_name
-    },
-    // attributes: ["drone_name", "price", "camera", "weight", "picture_large"]
+    }
   }).then(function(theDrone) {
     console.log(req.params);
 
