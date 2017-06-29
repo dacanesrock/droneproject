@@ -2,7 +2,7 @@
     "mysql": {
         "database": "drones_db",
         "user": "root",
-        "password": "Caesar9450"
+        "password": "geyekirb1"
     },
     "server": {
         "port": 3000
